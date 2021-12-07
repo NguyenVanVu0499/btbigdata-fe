@@ -1,0 +1,23 @@
+export const menuTemp = [
+    'Tài nguyên Nhập liệu',
+    'Tài nguyên Thống kê',
+    'Tài nguyên Kế hoạch',
+    'Tài nguyên Báo cáo tổng hợp',
+    'Tài nguyên Báo cáo huyện',
+    'Tài nguyên Báo cáo tỉnh',
+    'Tài nguyên Lịch sử nhập liệu',
+    'Tài nguyên Dự báo',
+    'Tài nguyên Cảnh báo',
+    'Tài nguyên Chỉ tiêu năm',
+    'Tài nguyên Cấu hình - Đầu vào chỉ tiêu',
+    'Tài nguyên Cấu hình - Nhóm chỉ tiêu',
+    'Tài nguyên Cấu hình - Chỉ tiêu',
+    'Tài nguyên Cấu hình - Người dùng',
+    'Tài nguyên Cấu hình - Nhóm người dùng',
+    'Tài nguyên Cấu hình - GRDP',
+    'Tài nguyên Cấu hình - Phòng',
+    'Tài nguyên Cấu hình - Chức vụ',
+    'Tài nguyên Cấu hình - Đơn vị tính',
+    'Tài nguyên Cấu hình - Tài nguyên',
+  ];
+  
