@@ -36,20 +36,20 @@
     }
   }
   ::ng-deep {
-    .add-toolbar-btn {
+    .add-toolbar-btn {  
       background-color: #368fe7 !important;
     }
     .edit-toolbar-btn {
-      background-color: #ffaf00 !important;
+      background-color: #FFAF00 !important;
     }
     .delete-toolbar-btn {
-      background-color: #fd3f42 !important;
+      background-color: #FD3F42 !important;
     }
     .save-toolbar-btn {
-      background-color: #39b894 !important;
+      background-color: #39B894 !important;
     }
     .cancel-toolbar-btn {
-      background-color: #a6a6a6 !important;
+      background-color: #A6A6A6 !important;
     }
   }
   .background-menu-bar {
@@ -331,17 +331,24 @@
               }
   
               .dropdown-menu {
-                padding: 0;
-                width: 100%;
+                position: absolute;
+                z-index: 99;
+                list-style: none;
+                background: #fff;
+                color: #000;
+                padding: 10px 10px;
+                border: 1px solid #000;
+                width: 160px;
                 left: auto;
-                right: 0;
+                top: 54px;
+                right: 20px;
                 height: fit-content;
                 margin: 0;
-                border-radius: 0;
+                border-radius: 7px;
                 display: none;
                 .dropdown-content {
                   height: 30px;
-                  color: #fff;
+                  color: rgb(0, 0, 0);
                   line-height: 30px;
                   .btn {
                     text-align: left;
@@ -355,7 +362,7 @@
                   }
                 }
                 .dropdown-content:hover {
-                  background-color: #fff;
+                  background-color: #4db658;
                   .btn {
                     color: #fff;
                   }

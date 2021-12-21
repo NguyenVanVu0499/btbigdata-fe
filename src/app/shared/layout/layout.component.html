@@ -51,18 +51,18 @@
             <button (click)="onClick()" class="dropdown-show" type="button" appOutside
               (clickedOutside)="selected = false">
               <img [src]="
-                  user.anh_dai_dien || '../../../assets/img/broken-image.png'
+                  user?.anh_dai_dien || '../../../assets/img/avatar.jpg'
                 " class="user-avatar" />
   
               <ul class="dropdown-menu" [class]="selected ? 'dropdown-open' : ''">
                 <li class="dropdown-content">
                   <a class="btn">Đổi mật khẩu</a>
                 </li>
-                <li class="dropdown-content">
+                <li [routerLink]="['/thong-tin']" class="dropdown-content">
                   <a class="btn">Thông tin</a>
                 </li>
-                <li class="dropdown-content">
-                  <a (click)="logout()" class="btn">Đăng xuất</a>
+                <li (click)="logout()" class="dropdown-content">
+                  <a class="btn">Đăng xuất</a>
                 </li>
               </ul>
             </button>
@@ -74,7 +74,7 @@
   
           <img src="../../../assets/img/background.jpg" style="width: 100%; height: auto;">
         </div> -->
-        <!-- <router-outlet></router-outlet> -->
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { UserIn } from './model/UserIn';
@@ -40,7 +40,7 @@ export class AuthenticationService implements OnDestroy {
     return this.menuSubject.value;
   }
 
-  login(username: string, password: string) {
+  login(username: string, password: string): Observable<any> {
     const userIn: UserIn = { username: username, password: password };
     const path = `${environment.baseURL}/token`;
     let contentHeader = new HttpHeaders({
@@ -54,15 +54,15 @@ export class AuthenticationService implements OnDestroy {
       )
       .pipe(
         map((data) => {
-          let menu1 :any = [];
-          menuTemp.forEach((i) => {
-            if (data.data.quyen_tai_nguyen.includes(i)) {
-              menu1.push(i)
-            }
-          });
-          data.data.quyen_tai_nguyen = menu1;
+          // let menu1 :any = [];
+          // menuTemp.forEach((i) => {
+          //   if (data.data.quyen_tai_nguyen.includes(i)) {
+          //     menu1.push(i)
+          //   }
+          // });
+          // data.data.quyen_tai_nguyen = menu1;
           this.userSubject.next(data.data);
-          console.log('quyen_tai_nguyen', data.data)
+          // console.log('quyen_tai_nguyen', data.data)
           localStorage.setItem(MOODLE_CURRENT_USE, JSON.stringify(data.data));
           localStorage.setItem(
             MOODLE_JWT_TOKEN,
